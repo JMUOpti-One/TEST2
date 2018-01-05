@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema Namespace="OPT1_EDI.OData.Documents"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="HeadersType">
+                <Key>
+                    <PropertyRef Name="EntryB1EDI" />
+                </Key>
+                <Property Name="EntryB1EDI" Type="Edm.Int32" Nullable="false" />
+                <Property Name="DocTypeB1EDI" Type="Edm.String" MaxLength="5" />
+                <Property Name="StatusB1EDI" Type="Edm.Int32" />
+                <Property Name="LogsB1EDI" Type="Edm.String" MaxLength="200" />
+                <Property Name="InterchangeCode" Type="Edm.String" MaxLength="50" />
+                <Property Name="InterchangeDate" Type="Edm.DateTime" />
+                <Property Name="EmetteurCode" Type="Edm.String" MaxLength="35" />
+                <Property Name="DocClientNum" Type="Edm.String" MaxLength="35" />
+                <Property Name="DocClientDate" Type="Edm.DateTime" />
+                <Property Name="DocClientDueDate" Type="Edm.DateTime" />
+                <Property Name="DocEntrySAP" Type="Edm.Int32" />
+                <Property Name="CommentaireCode" Type="Edm.String" MaxLength="10" />
+                <Property Name="Commentaire" Type="Edm.String" MaxLength="254" />
+                <Property Name="EANDocCardCode" Type="Edm.String" MaxLength="20" />
+                <Property Name="DocCardCode" Type="Edm.String" MaxLength="20" />
+                <Property Name="DocCardName" Type="Edm.String" MaxLength="100" />
+                <Property Name="DocCardClientCode" Type="Edm.String" MaxLength="50" />
+                <Property Name="DocCardClientName" Type="Edm.String" MaxLength="100" />
+                <Property Name="CntctName" Type="Edm.String" MaxLength="70" />
+                <Property Name="TrnspName" Type="Edm.String" MaxLength="100" />
+                <Property Name="DocTotalHT" Type="Edm.Double" />
+                <Property Name="PickRmrk" Type="Edm.String" MaxLength="254" />
+                <Property Name="OwnerCode" Type="Edm.Int32" />
+                <Property Name="DiscPrcnt" Type="Edm.Double" Nullable="false" DefaultValue="0" />
+                <Property Name="SlpCode" Type="Edm.Int32" />
+                <Property Name="Series" Type="Edm.Int32" />
+                <Property Name="U_MG2S_Grpmt" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_nGrpmt" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_SsGrpmt" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_nSsGrpmt" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_Enseigne" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_nEnseigne" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_PoidsDoc" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_Trsprt" Type="Edm.String" MaxLength="50" />
+                <Property Name="U_OPT1_EcoExclu" Type="Edm.String" MaxLength="1" />
+                <Property Name="U_MG2S_B1E_TYPE" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_B1E_ENTRY" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_B1E_TOEXP" Type="Edm.String" MaxLength="1" />
+                <Property Name="U_MG2S_B1E_ISEXP" Type="Edm.String" MaxLength="1" />
+                <Property Name="U_MG2S_B1E_IDEXP" Type="Edm.Int32" />
+                <Property Name="U_MG2S_B1E_DAEXP" Type="Edm.DateTime" />
+                <Property Name="U_MG2S_B1E_STEXP" Type="Edm.String" MaxLength="250" />
+                <Property Name="U_MG2S_B1E_STPRT" Type="Edm.String" MaxLength="1" />
+                <Property Name="U_MG2S_FRAISINT1" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_FRAISINT2" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_FRAISINT3" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_FRAISINTS" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_DVTC_DATEENR" Type="Edm.String" MaxLength="50" />
+                <Property Name="U_MG2S_ValDate" Type="Edm.DateTime" />
+                <Property Name="U_MG2S_ShipToCard" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_ShipToCode" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_OPT1_LineTotalTTC" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="ShippingCosts" Type="Edm.Double" Nullable="false" DefaultValue="0" />
+                <Property Name="U_MG2S_EDI_CPSCBord" Type="Edm.Int16" />
+                <Property Name="U_MG2S_EDI_CPTyPart" Type="Edm.String" MaxLength="3" />
+                <Property Name="U_MG2S_EDI_CPCtcDesC" Type="Edm.String" MaxLength="3" />
+                <Property Name="U_MG2S_EDI_CPCtcDesN" Type="Edm.String" MaxLength="35" />
+                <Property Name="U_MG2S_EDI_CPCtcDesP" Type="Edm.String" MaxLength="35" />
+                <Property Name="U_MG2S_EDI_CPTelDes" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_EDI_CPMelDes" Type="Edm.String" MaxLength="35" />
+                <Property Name="U_MG2S_EDI_CPPorte" Type="Edm.String" MaxLength="8" />
+                <Property Name="U_MG2S_EDI_CPPorte2" Type="Edm.String" MaxLength="8" />
+                <Property Name="U_MG2S_EDI_CPInter" Type="Edm.String" MaxLength="30" />
+                <Property Name="U_MG2S_EDI_CPPoint" Type="Edm.String" MaxLength="50" />
+                <Property Name="U_OPT1_EDI_ATGP_TC" Type="Edm.String" MaxLength="254" />
+                <Property Name="U_OPT1_EDI_ATGP_CL" Type="Edm.String" MaxLength="254" />
+                <Property Name="U_OPT1_EDI_ATGP_CI" Type="Edm.String" MaxLength="254" />
+                <NavigationProperty Name="Addresses" Relationship="OPT1_EDI.OData.Documents.DocEDI_AddressesType" FromRole="HeadersPrincipal" ToRole="AddressesDependent" />
+                <NavigationProperty Name="Lines" Relationship="OPT1_EDI.OData.Documents.DocEDI_LinesType" FromRole="HeadersPrincipal" ToRole="LinesDependent" />
+            </EntityType>
+            <EntityType Name="AddressesType">
+                <Key>
+                    <PropertyRef Name="EntryB1EDI" />
+                </Key>
+                <Property Name="EntryB1EDI" Type="Edm.Int32" Nullable="false" />
+                <Property Name="EANCodeAddressB" Type="Edm.String" MaxLength="99" />
+                <Property Name="CodeAddressB" Type="Edm.String" MaxLength="99" />
+                <Property Name="AddressB" Type="Edm.String" MaxLength="99" />
+                <Property Name="Address2B" Type="Edm.String" MaxLength="99" />
+                <Property Name="ZipCodeB" Type="Edm.String" MaxLength="20" />
+                <Property Name="CityB" Type="Edm.String" MaxLength="99" />
+                <Property Name="CountryB" Type="Edm.String" MaxLength="3" />
+                <Property Name="EANCodeAddressS" Type="Edm.String" MaxLength="99" />
+                <Property Name="CodeAddressS" Type="Edm.String" MaxLength="99" />
+                <Property Name="AddressS" Type="Edm.String" MaxLength="99" />
+                <Property Name="Address2S" Type="Edm.String" MaxLength="99" />
+                <Property Name="ZipCodeS" Type="Edm.String" MaxLength="20" />
+                <Property Name="CityS" Type="Edm.String" MaxLength="99" />
+                <Property Name="CountryS" Type="Edm.String" MaxLength="3" />
+            </EntityType>
+            <EntityType Name="LinesType">
+                <Key>
+                    <PropertyRef Name="EntryB1EDI" />
+                    <PropertyRef Name="LineNum" />
+                </Key>
+                <Property Name="EntryB1EDI" Type="Edm.Int32" Nullable="false" />
+                <Property Name="LineNum" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ItemEAN" Type="Edm.String" MaxLength="254" />
+                <Property Name="ItemClientCode" Type="Edm.String" MaxLength="50" />
+                <Property Name="ItemCode" Type="Edm.String" MaxLength="50" />
+                <Property Name="ItemDescription" Type="Edm.String" MaxLength="100" />
+                <Property Name="ShipDate" Type="Edm.DateTime" />
+                <Property Name="Quantity" Type="Edm.Double" />
+                <Property Name="UnitPrice" Type="Edm.Double" />
+                <Property Name="PriceBase" Type="Edm.Int32" />
+                <Property Name="DiscPrcnt" Type="Edm.Double" />
+                <Property Name="LineTotal" Type="Edm.Double" />
+                <Property Name="Expected_UnitPrice" Type="Edm.Double" Nullable="false" DefaultValue="-1" />
+                <Property Name="Expected_DiscPrcnt" Type="Edm.Double" Nullable="false" DefaultValue="-1" />
+                <Property Name="WhsCode" Type="Edm.String" MaxLength="20" />
+                <Property Name="LineNumSAP" Type="Edm.Int32" />
+                <Property Name="OcrCode" Type="Edm.String" MaxLength="8" />
+                <Property Name="OcrCode2" Type="Edm.String" MaxLength="8" />
+                <Property Name="Text" Type="Edm.String" MaxLength="2147483647" />
+                <Property Name="UoMEntry" Type="Edm.Int32" />
+                <Property Name="UoMCode" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_CauseRemise" Type="Edm.String" MaxLength="200" />
+                <Property Name="U_MG2S_Remise1" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_GratuitActive" Type="Edm.String" MaxLength="2" />
+                <Property Name="U_MG2S_GrttLctv" Type="Edm.String" MaxLength="2" />
+                <Property Name="U_MG2S_DATEDISPO" Type="Edm.DateTime" />
+                <Property Name="U_MG2S_QteDispo" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_DispoRes" Type="Edm.String" MaxLength="10" />
+                <Property Name="U_MG2S_Sem" Type="Edm.String" MaxLength="10" />
+                <Property Name="U_MG2S_BDT_TYPE" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_DVT_DESC" Type="Edm.String" MaxLength="2147483647" />
+                <Property Name="U_MG2S_DVTC_TEMP" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_DVTC_IDLAL" Type="Edm.Int32" />
+                <Property Name="U_MG2S_DVTC_IDGRT" Type="Edm.Int32" />
+                <Property Name="U_MG2S_IDLine" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_Four" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_FourName" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_Four1" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_FourName1" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_Four2" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_FourName2" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_Four3" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_FourName3" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_Four4" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_FourName4" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_PrixHA" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_FraisHA" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_Rate" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_Frais1" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_Frais2" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_StatutHA" Type="Edm.String" MaxLength="2" />
+                <Property Name="U_MG2S_Coef" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_CoefH" Type="Edm.Decimal" Precision="21" Scale="6" />
+                <Property Name="U_MG2S_DeviseHA" Type="Edm.String" MaxLength="10" />
+                <Property Name="U_MG2S_ShipCardCode1" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_ShipToCode1" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_ShipCardCode2" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_ShipToCode2" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_ShipCardCode3" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_ShipToCode3" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_MG2S_ShipCardCode4" Type="Edm.String" MaxLength="20" />
+                <Property Name="U_MG2S_ShipToCode4" Type="Edm.String" MaxLength="100" />
+                <Property Name="U_OPT1_LineTotalTTC" Type="Edm.Decimal" Precision="21" Scale="6" />
+            </EntityType>
+            <Association Name="DocEDI_AddressesType">
+                <End Type="OPT1_EDI.OData.Documents.HeadersType" Role="HeadersPrincipal" Multiplicity="1"/>
+                <End Type="OPT1_EDI.OData.Documents.AddressesType" Role="AddressesDependent" Multiplicity="*"/>
+            </Association>
+            <Association Name="DocEDI_LinesType">
+                <End Type="OPT1_EDI.OData.Documents.HeadersType" Role="HeadersPrincipal" Multiplicity="1"/>
+                <End Type="OPT1_EDI.OData.Documents.LinesType" Role="LinesDependent" Multiplicity="*"/>
+            </Association>
+            <EntityContainer Name="Documents" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Headers" EntityType="OPT1_EDI.OData.Documents.HeadersType" />
+                <EntitySet Name="Addresses" EntityType="OPT1_EDI.OData.Documents.AddressesType" />
+                <EntitySet Name="Lines" EntityType="OPT1_EDI.OData.Documents.LinesType" />
+                <AssociationSet Name="DocEDI_Addresses" Association="OPT1_EDI.OData.Documents.DocEDI_AddressesType">
+                    <End Role="HeadersPrincipal" EntitySet="Headers"/>
+                    <End Role="AddressesDependent" EntitySet="Addresses"/>
+                </AssociationSet>
+                <AssociationSet Name="DocEDI_Lines" Association="OPT1_EDI.OData.Documents.DocEDI_LinesType">
+                    <End Role="HeadersPrincipal" EntitySet="Headers"/>
+                    <End Role="LinesDependent" EntitySet="Lines"/>
+                </AssociationSet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

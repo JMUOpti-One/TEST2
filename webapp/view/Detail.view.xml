@@ -1,0 +1,127 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:footerbar="sap.ushell.ui.footerbar" controllerName="opt1.controller.Detail"><semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}{EntryB1EDI}" busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:positiveAction>
+					<semantic:PositiveAction text="{i18n>detailSave}" press="onBtnSavePress"/>
+				</semantic:positiveAction>
+				<semantic:negativeAction>
+					<semantic:NegativeAction text="{i18n>detailClose}" press="onSemanticButtonPress"/>
+				</semantic:negativeAction>
+		<semantic:content>
+			
+			<ObjectListItem type="Active" title="{i18n>detailDocCardNum}{DocClientNum}" id="__item8">
+			
+			    <attributes>
+			        <ObjectAttribute text="{LogsB1EDI}" id="__attribute117"/>
+			    </attributes>
+			
+			    <firstStatus>
+			
+			        <ObjectStatus text="{path: 'StatusB1EDI', formatter: '.formatter.statusText'}" state="{path: 'StatusB1EDI', formatter: '.formatter.statusState'}" icon="{path: 'StatusB1EDI', formatter: '.formatter.statusStateIcon'}"/>
+			
+			    </firstStatus>
+			
+			    <secondStatus>
+			
+			    </secondStatus>
+			</ObjectListItem>
+			<sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="__form1">
+				<sap.ui.layout.form:formContainers>
+					<sap.ui.layout.form:FormContainer id="__container1" expandable="true" title="{i18n>detailTitleUpdFields}">
+			        	<sap.ui.layout.form:formElements>
+			                <sap.ui.layout.form:FormElement label="{i18n>detailCardCode}" id="__element1">
+			                    <sap.ui.layout.form:fields>
+			                        <Input value="{DocCardCode}" width="100%" id="__input1"/>
+			                        <Text text="{DocCardName}" id="__text4"/>
+			                    </sap.ui.layout.form:fields>
+			                </sap.ui.layout.form:FormElement>
+			                <sap.ui.layout.form:FormElement label="{i18n>detailCardName}" id="__element2">
+			                    <sap.ui.layout.form:fields>
+			                        <Input value="{DocCardClientName}" width="100%" id="__input3"/>
+			                    </sap.ui.layout.form:fields>
+			                </sap.ui.layout.form:FormElement>
+			                <sap.ui.layout.form:FormElement label="{i18n>detailCntct}" id="__element3">
+			                    <sap.ui.layout.form:fields>
+			                        <Input value="{CntctName}" width="100%" id="__input4"/>
+			                    </sap.ui.layout.form:fields>
+			                </sap.ui.layout.form:FormElement>
+			                <sap.ui.layout.form:FormElement id="__element6" label="{i18n>detailDocDate}">
+			                    <sap.ui.layout.form:fields>
+			                        <DatePicker value="{DocClientDate}" width="100%" id="__picker0"/>
+			                    </sap.ui.layout.form:fields>
+			                <sap.ui.layout.form:label>
+			                    <Label id="__label10"/>
+			                </sap.ui.layout.form:label>
+			                </sap.ui.layout.form:FormElement>
+			                <sap.ui.layout.form:FormElement id="__element7" label="{i18n>detailDocDueDate}">
+			                    <sap.ui.layout.form:fields>
+			                        <DatePicker value="{DocClientDueDate}" width="100%" id="__picker1"/>
+			                    </sap.ui.layout.form:fields>
+			                <sap.ui.layout.form:label>
+			                    <Label id="__label11"/>
+			                </sap.ui.layout.form:label>
+			                </sap.ui.layout.form:FormElement>
+			                <sap.ui.layout.form:FormElement id="__element8" label="{i18n>detailRemarks}">
+			                    <sap.ui.layout.form:fields>
+			                        <TextArea id="__area0" value="{Commentaire}" rows="3"/>
+			                    </sap.ui.layout.form:fields>
+			                <sap.ui.layout.form:label>
+			                    <Label id="__label12"/>
+			                </sap.ui.layout.form:label>
+			            </sap.ui.layout.form:FormElement>
+			        </sap.ui.layout.form:formElements>
+			    <sap.ui.layout.form:customData>
+			    	<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="true" id="__data19"/>
+			    </sap.ui.layout.form:customData>
+			</sap.ui.layout.form:FormContainer>
+		</sap.ui.layout.form:formContainers>
+		<sap.ui.layout.form:layout>
+			<sap.ui.layout.form:ResponsiveGridLayout id="__layout2"/>
+		</sap.ui.layout.form:layout></sap.ui.layout.form:Form>
+			
+		<IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter id="iconTabBarFilter1" icon="sap-icon://sales-order-item" tooltip="{i18n>detailIconTabBarInfo}">
+					<Table id="lineItemsList" width="auto" items="{Lines}" updateFinished="onListUpdateFinished" noDataText="{i18n>detailLineItemTableNoDataText}" busyIndicatorDelay="{detailView>/lineItemTableDelay}" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar id="lineItemsToolbar">
+								<Title id="lineItemsHeader" text="{detailView>/lineItemListTitle}"/>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="{i18n>detailLineItemTableIDColumn}"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+								<Text text="{i18n>detailLineItemTableUnitNumberColumn}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{ItemCode}" text="{LineNum}"/>
+									<ObjectNumber/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</IconTabFilter>
+				<IconTabFilter id="iconTabBarFilter2" icon="sap-icon://addresses" tooltip="{i18n>detailIconTabBarAttachments}">
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+	</semantic:content>
+
+	<semantic:sendEmailAction>
+		<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+	</semantic:sendEmailAction>
+
+	<semantic:shareInJamAction>
+		<semantic:ShareInJamAction id="shareInJam" visible="{FLP>/isShareInJamActive}" press="onShareInJamPress"/>
+	</semantic:shareInJamAction>
+
+	<semantic:saveAsTileAction>
+		<footerbar:AddBookmarkButton id="shareTile" title="{detailView>/saveAsTileTitle}"/>
+	</semantic:saveAsTileAction>
+
+</semantic:DetailPage>
+
+</mvc:View>
